@@ -78,6 +78,10 @@ button {
     margin-left: 12px;
 }
 
+#pass-one, #pass-two {
+    cursor: pointer;
+}
+
 .pass-length {
     display: flex;
     align-items: center;

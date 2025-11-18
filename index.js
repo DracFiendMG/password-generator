@@ -59,7 +59,11 @@ function copyText(id) {
     }
     
     if (textToCopy !== "") {
-        navigator.clipboard.writeText(textToCopy)
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            alert("Password copied to clipboard!")
+        }).catch(err => {
+            console.error("Failed to copy: ", err)
+        })
     }
 }
 
