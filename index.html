@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="upper-part">
+                <h1 class="title">Generate a <br><span class="title-green">random password</span></h1>
+                <p class="sub-title">Never use an insecure password again.</p>
+                <div class="query-container">
+                    <div>
+                        <p class="pass-title">Set Password Length</p>
+                        <div class="pass-length">
+                            <button id="decrement" onclick="decrementPassLength()">-</button>
+                            <p id="length">10</p>
+                            <button id="increment" onclick="incrementPassLength()">+</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="symbol-title">Need Symbols?</p>
+                        <label class="symbol-input">
+                            <input id="symbol-checkbox" type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <!-- <input id="symbol-el" type="checkbox" checked onclick="includeOrExclude('symbol')"> -->
+                        </label>
+                    </div>
+                    <div>
+                        <p class="numbers-title">Need Numbers?</p>
+                        <label class="numbers-input">
+                            <input id="numbers-checkbox" type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            <!-- <input id="number-el" type="checkbox" checked onclick="includeOrExclude('number')"> -->
+                        </label>
+                    </div>
+                </div>
+                <button id="g-password" onclick="generatePasswords()">Generate Passwords</button>
+            </div>
+            <div class="lower-part">
+                <p id="pass-one" class="passwords" onclick="copyText('pass-one')"></p>
+                <p id="pass-two" class="passwords" onclick="copyText('pass-two')"></p>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>
